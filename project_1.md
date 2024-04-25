@@ -47,8 +47,11 @@ The **raw_alpha** consists of two parts, which predict the upward trend and the 
 
 ### step 2: Resample raw_alpha by taking the last value in every 30-second interval
 
-Resample **raw_alpha** so that it is updated every 30 seconds (09:30:30, 09:31:00, 09:31:30, ..., 14:59:00, 14:59:30, 15:00:00)
+Resample **raw_alpha** so that it is updated every 30 seconds (09:30:30, 09:31:00, 09:31:30, ..., 14:59:00, 14:59:30, 15:00:00).
 
+*FinalSignal = ts_ema(ts_ema(raw_alpha,60),20)*
+
+The complete calculations are in "calc_signal.py".
 
 
 
