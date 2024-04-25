@@ -9,4 +9,7 @@ Definitions of the main columns: ap1, ap2, ..., ap5 representing ask_price1, ask
 ## Idea generation
 The momentum effect in stock index futures has been widely discussed. I have met some quantitative traders achieved stable returns through intraday trading strategies incorperating momentum effect. The success of these strategies heavily relies on rapid response to market dynamics. That is why I would like to find a signal which target on short-term price fluctuations. As the prediction signal probably changes rapidly, the corresponding strategy would be a high-turnover strategy.
 
-I look into the high-frequency data to observe the characteristics of the limit order book during the formation of price trends. 
+I look into the high-frequency data to observe the characteristics of the limit order book during the formation of price trends. And I found that 
+![upward trend](./images/picture1.png)
+
+![downward trend](./images/picture2.png)
