@@ -45,4 +45,13 @@ raw_alpha = (ask_rs * bid_range_avg) * (ask_rs < 0) + (bid_rs * ask_range_avg) *
 
 The **raw_alpha** consists of two parts, which predict the upward trend and the downward trend, respectively. 
 
+### step 2: Resample raw_alpha by taking the last value in every 30-second interval
+
+Resample **raw_alpha** so that it is updated every 30 seconds (09:30:30, 09:31:00, 09:31:30, ..., 14:59:00, 14:59:30, 15:00:00)
+
+
+
+
+
+
 
