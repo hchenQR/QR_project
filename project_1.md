@@ -58,6 +58,10 @@ The code related to backtesting is in the file "backtesting.py".
 
 In this part, normalization processing would be applied to the **FinalSignal** (see the function scale_normal() in "backtesting.py"). After the normalization processing, we have one **normalized_signal_dataframe** and one **position_weight_dataframe**.
 
+The **normalized_signal_dataframe** is used to calculate the IC table (Information Coefficient). In this case, "Information Coefficient" is the time-series Pearson correlation between **normalized_signal** and future returns of specified intervals.
+
+
+
 
 
 
