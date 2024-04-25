@@ -53,7 +53,10 @@ Resample **raw_alpha** so that it is updated every 30 seconds (09:30:30, 09:31:0
 
 The complete calculations are in "calc_signal.py".
 
+## Back testing results
+The code related to backtesting is in the file "backtesting.py".
 
+In this part, normalization processing would be applied to the **FinalSignal** (see the function scale_normal() in "backtesting.py"). After the normalization processing, we have one **normalized_signal_dataframe** and one **position_weight_dataframe**.
 
 
 
