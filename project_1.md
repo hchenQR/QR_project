@@ -22,10 +22,10 @@ The following two figures are examples:
 Define an improved version of the RSI indicator as:
 
 $$
-ts_rs(price, N) = ts_ema(ReLU(ts_diff(price,1)), N) / ts_ema(abs(ts_diff(price,1)), N)
+rs(price, N) = ema(ReLU(diff(price,1)), N) / ema(abs(diff(price,1)), N)
 $$
 
-The operator ts_ema() is for "Exponential Moving Average", and ts_diff() is equivalent to numpy.diff.
+The operator ema() is for "Exponential Moving Average", and diff() is equivalent to numpy.diff. N is the window size for rolling calculation.
 
 
 
