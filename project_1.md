@@ -25,7 +25,23 @@ $$
 rs(price, N) = ema(ReLU(diff(price,1)), N) / ema(abs(diff(price,1)), N)
 $$
 
-The operator ema() is for "Exponential Moving Average", and diff() is equivalent to numpy.diff. N is the window size for rolling calculation.
+The operator ema() is for "Exponential Moving Average", and diff() is equivalent to numpy.diff. N is the window size for rolling calculation. The operator rs() returns a value lies between [0,1].
+
+The complete calculation process is as follows:
+step 1: calculations for every snapshots (updated every 500 milliseconds)
+
+spread_avg = ts_avg(ask_price1 - bid_price1, 600), 
+
+bid_range_avg = ts_avg((bid_price1 - bid_price5)/spread_avg, 120),
+
+ask_range_avg = ts_avg((ask_price5 - ask_price1)/spread_avg, 120),
+
+bid_rs = rs(bp1) - 0.5,
+
+ask_rs = rs(ap1) - 0.5,
+
+raw_alpha = (ask_rs * bid_range_avg)*(ask_rs < 0) + (bid_rs * ask_range_avg)*(bid_rs > 0)
+
 
 
 
