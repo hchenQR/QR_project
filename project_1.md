@@ -29,7 +29,7 @@ The operator ema() is for "Exponential Moving Average", and diff() is equivalent
 
 The complete calculation process is as follows:
 
-step 1: calculations for every snapshots (updated every 500 milliseconds)
+### step 1: calculations for every snapshots (updated every 500 milliseconds)
 
 spread_avg = ts_avg(ask_price1 - bid_price1, 600), 
 
