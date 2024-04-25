@@ -28,6 +28,7 @@ $$
 The operator ema() is for "Exponential Moving Average", and diff() is equivalent to numpy.diff. N is the window size for rolling calculation. The operator rs() returns a value lies between [0,1].
 
 The complete calculation process is as follows:
+
 step 1: calculations for every snapshots (updated every 500 milliseconds)
 
 spread_avg = ts_avg(ask_price1 - bid_price1, 600), 
