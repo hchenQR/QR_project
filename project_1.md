@@ -25,7 +25,7 @@ $$
 rs(price, N) = ema(ReLU(diff(price,1)), N) / ema(abs(diff(price,1)), N)
 $$
 
-The operator ema() is for "Exponential Moving Average", and diff() is equivalent to numpy.diff. N is the window size for rolling calculation. The operator rs() returns a value lies between [0,1].
+The operator ema() is for "Exponential Moving Average", and diff() is equivalent to numpy.diff. N is the window size for rolling calculation. The operator rs() returns a value lies between \[0,1\].
 
 The complete calculation process is as follows:
 
@@ -41,8 +41,8 @@ bid_rs = rs(bp1) - 0.5,
 
 ask_rs = rs(ap1) - 0.5,
 
-raw_alpha = (ask_rs * bid_range_avg)*(ask_rs < 0) + (bid_rs * ask_range_avg)*(bid_rs > 0)
+raw_alpha = (ask_rs * bid_range_avg) * (ask_rs < 0) + (bid_rs * ask_range_avg) * (bid_rs > 0)
 
-
+The **raw_alpha** consists of two parts, which predict the upward trend and the downward trend, respectively. 
 
 
