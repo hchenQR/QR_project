@@ -18,10 +18,13 @@ The following two figures are examples:
 (ask_price5 - ask_price1) or (bid_price1 - bid_price5) might not has a strong predictive power, while we can combine them with another basic predictor. In this case, I use an improved version of the RSI indicator, which is a momentum factor suitable for predicting short-term trends. 
 
 ## Expression of the price prediction signal
+
 Define an improved version of the RSI indicator as:
+
 $$
 ts_rs(price, N) = ts_ema(ReLU(ts_diff(price,1)), N) / ts_ema(abs(ts_diff(price,1)), N)
 $$
+
 The operator ts_ema() is for "Exponential Moving Average", and ts_diff() is equivalent to numpy.diff.
 
 
