@@ -58,7 +58,15 @@ The code related to backtesting is in the file "backtesting.py".
 
 In this part, normalization processing would be applied to the **FinalSignal** (see the function scale_normal() in "backtesting.py"). After the normalization processing, we have one **normalized_signal_dataframe** and one **position_weight_dataframe**.
 
-The **normalized_signal_dataframe** is used to calculate the IC table (Information Coefficient). In this case, "Information Coefficient" is the time-series Pearson correlation between **normalized_signal** and future returns of specified intervals.
+The **normalized_signal_dataframe** is used to calculate the IC table (Information Coefficient). In this case, "Information Coefficient" is the time-series Pearson correlation between **normalized_signal** and future returns of specified intervals. Note that all interval returns are shifted by 1 minute before calculating the Pearson correlation, assuming that I would need to adjust positions weight of the portfolio during (t, t+1min).
+
+The **position_weight_dataframe** is used to calculate the performance table. **position_weight_dataframe** is derived from **normalized_signal_dataframe**, representing the target position in the next 30 seconds. With target positions we can simulate the trading performance of this strategy.
+
+The IC table and performance table:
+![backtesting](./images/backtest.png)
+
+
+
 
 
 
