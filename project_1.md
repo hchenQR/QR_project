@@ -9,7 +9,9 @@ Definitions of the main columns: ap1, ap2, ..., ap5 representing ask_price1, ask
 ## Idea generation
 The momentum effect in stock index futures has been widely discussed. I have met some quantitative traders achieved stable returns through intraday trading strategies incorperating momentum effect. The success of these strategies heavily relies on rapid response to market dynamics. That is why I would like to find a signal which target on short-term price fluctuations. As the prediction signal probably changes rapidly, the corresponding strategy would be a high-turnover strategy.
 
-I look into the high-frequency data to observe the characteristics of the limit order book during the formation of price trends. And I found that 
-![upward trend](./images/picture1.png)
+I look into the high-frequency data to observe the characteristics of the limit order book during the formation of price trends. And I found that when the mid-price is stable, (ask_price5 - ask_price1) and (bid_price1 - bid_price5) tend to stabilize within a relatively small range. This is probably because investors do not have significant disagreements on the future price movements. However, when the mid-price begins to show an upward trend, the spread between ask_price1 and ask_price5 tends to increase. Similarly, as the mid-price begins to show a downward trend, the spread between bid_price1 and bid_price5 tends to increase. It is reasonable to pay more attention to the price momentum when (ask_price5 - ask_price1) or (bid_price1 - bid_price5) increases.
 
+The following two figures are examples:
+![upward trend](./images/picture1.png)
 ![downward trend](./images/picture2.png)
+
