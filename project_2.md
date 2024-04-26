@@ -20,11 +20,15 @@ At the end of part 2, the modified TWAP execution strategy can complete more tha
 
 $$
 Slippage Percentage = (AvgTradedPrice - TargetPrice) / TargetPrice, 
-$$for Sell task.
+$$
+
+for Sell task.
 
 $$
 Slippage Percentage = (TargetPrice - AvgTradedPrice) / TargetPrice, 
-$$for Buy task.
+$$
+
+for Buy task.
 
 Try to find a better algo than TWAP execution. The proposed algo need to complete at least 95% of the target volume of each task in simulation, and has a better performance in the context of "Slippage Percentage".
 
