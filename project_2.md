@@ -11,12 +11,12 @@ Inference of trading events between snapshots is usually not entirely correct. W
 For more complex situations where bid1 and ask1 have changed between snapshots, we can calculate the VWAP between the two snapshots and then make the assumption that all trades occurred at the two price levels closest to the VWAP. By making assumptions about trade distribution, we can again solve linear equations to estimate trade volumes at specific price levels.
 
 ## Part 2
-Simulate a TWAP execution strategy, where we only place passive orders at the best bid or best ask price. For each execution task, researchers need to equally divide the total volume into every 30-second intervals during the 5-minute task. Assuming that the orders you place are at the end of the queue for the current ask1 or bid1, you need to monitor and update the queue by using the trading events calculated in part 1. If the current order is no longer at the best bid or best ask, we need to cancel the order and re-place it at the best bid or best ask.
+Use level-2 data to perform a simulation for a TWAP execution strategy, where we only place passive orders at the best bid or best ask price. For each execution task, researchers need to equally divide the total volume into every 30-second intervals during the 5-minute task. Assuming that the orders you place are at the end of the queue for the current ask1 or bid1, you need to monitor and update the queue by using the trading events calculated in part 1. In this simulation, if the current placed order is no longer at the best bid or best ask, we need to cancel the order and re-place it at the best bid or best ask.
 
-By performing the simulation, calculate the percentage of the strategy's traded volume relative to the target volume of the task for each execution task. Then try to modify the TWAP execution strategy, so that the ratio could be higher than 95%.
+By performing the simulation, calculate the percentage of the strategy's traded volume relative to the target volume of the task for each execution task. Try to modify the TWAP execution strategy so that this ratio could be higher than 95%.
 
 ## Part 3
-At the end of part 2, the modified TWAP execution strategy can complete more than 95% of the target volume of each task. Take this strategy as a benchmark, calculate its average slippage:
+At the end of part 2, the modified TWAP execution strategy would be able to execute more than 95% of the target volume of each task. Take this strategy as a benchmark, and calculate its average slippage:
 
 $$
 Slippage Percentage = (AvgTradedPrice - TargetPrice) / TargetPrice, 
@@ -30,9 +30,9 @@ $$
 
 for Buy task.
 
-Try to find a better algo than TWAP execution. The proposed algo need to complete at least 95% of the target volume of each task in simulation, and has a better performance in the context of "Slippage Percentage".
+Try to find a better algo than TWAP execution. The proposed algo need to complete at least 95% of the target volume of each task in simulation, and has a better performance compared to the TWAP algo in the context of "Slippage Percentage".
 
-It is recommended to incorporate short-term prediction signals into your trading algorithm. The most common short-term prediction signal might be "Order Imbalance" **(bid_volume1 - ask_volume1)/(bid_volume1 + ask_volume1)**. I would suggest the candidates to use the inferred trading events between snapshots in part 1 to generate other short-term prediction signals.
+It is recommended to incorporate short-term prediction signals into your trading algorithm. The most common short-term prediction signal might be "Order Imbalance" **(bid_volume1 - ask_volume1)/(bid_volume1 + ask_volume1)**. Candidates are recommended to use the inferred trading events between snapshots in part 1 to generate other short-term prediction signals.
 
 
 
