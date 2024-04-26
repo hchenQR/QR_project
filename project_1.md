@@ -67,7 +67,7 @@ The IC table and performance table:
 
 ### IC table description:
 The three columns on the right side of the table represent the Information Coefficient calculated from corresponding interval return (Both ICs are multiplied by 100). For example, "0min_15min_ic" represents the Pearson correlation between **signal at time t** with **future return calculated for (t+1min, t+16min)**.
-
+According to the IC table, the predictive power of this signal is stable for the next 15-min and 30-min returns, with IC around 2.3% and 1.17%, respectively.
 
 
 
