@@ -73,8 +73,14 @@ According to the IC table, the predictive power of this signal is stable for the
 Definitions of the main columns are as follow:
 1. long: the average long position weight
 2. short: the average short position weight
-3. pnl: the annualized return. PnL of each 30-second interval is calculated by multiply(position_t, return of close price in (t+30s, t+1min))
-4. 
+3. pnl (%): the annualized return. PnL of each 30-second interval is calculated by multiply(position_t, return of close price in (t+30s, t+1min))
+4. tvr (%): the average turnover rate per trading day
+5. sharpe: the Sharpe ratio calculated from daily PnL
+6. dd: Maximum drawdown
+7. mg_bp: Total PnL / Total turnover
+
+According to the performance table, the corresponding strategy can achieve around a 30% annualized return. The Sharpe ratio is around 1.7, which is as expected. 
+
 
 
 
