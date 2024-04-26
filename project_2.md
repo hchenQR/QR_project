@@ -32,6 +32,8 @@ for Buy task.
 
 Try to find a better algo than TWAP execution. The proposed algo need to complete at least 95% of the target volume of each task in simulation, and has a better performance in the context of "Slippage Percentage".
 
+It is recommended to incorporate short-term prediction signals into your trading algorithm. The most common short-term prediction signal might be "Order Imbalance" **(bid_volume1 - ask_volume1)/(bid_volume1 + ask_volume1)**. I would suggest the candidates to use the inferred trading events between snapshots in part 1 to generate other short-term prediction signals.
+
 
 
 
