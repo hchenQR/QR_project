@@ -1,4 +1,4 @@
-# project 2: Order execution problem -- algo trading
+# project 2: Order execution problem and algo trading
 In this project, our objective is to develop an order execution strategy and to conduct trading simulation using the provided data. The project is divided into three parts, which are to be completed step by step, making it easier for the candidates to achieve the goal.
 
 The provided file TradeTaskLog.csv contains the selected execution tasks, with each line representing a 5-minute task. It also provides information of each task,  including the date and time the task begins, the contract to be traded, the direction of the trading task (buy or sell), the volume be traded, and the trading volume in the market during the task period. The level-2 data corresponding to each execution task would be provided. Researchers can use either Python or C/C++ to complete the data analysis and subsequent simulation.
@@ -16,7 +16,17 @@ Simulate a TWAP execution strategy, where we only place passive orders at the be
 By performing the simulation, calculate the percentage of the strategy's traded volume relative to the target volume of the task for each execution task. Then try to modify the TWAP execution strategy, so that the ratio could be higher than 95%.
 
 ## Part 3
+At the end of part 2, the modified TWAP execution strategy can complete more than 95% of the target volume of each task. Take this strategy as a benchmark, calculate its average slippage:
 
+$$
+Slippage Percentage = (AvgTradedPrice - TargetPrice) / TargetPrice, for Sell task.
+$$
+
+$$
+Slippage Percentage = (TargetPrice - AvgTradedPrice) / TargetPrice, for Buy task.
+$$
+
+Try to find a better algo than TWAP execution. The proposed algo need to complete at least 95% of the target volume of each task in simulation, and has a better performance in the context of "Slippage Percentage".
 
 
 
