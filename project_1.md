@@ -65,7 +65,8 @@ The **position_weight_dataframe** is used to calculate the performance table. **
 The IC table and performance table:
 ![backtesting](./images/backtest.png)
 
-
+### IC table description:
+The three columns on the right side of the table represent the Information Coefficient calculated from corresponding interval return (Both ICs are multiplied by 100). For example, "0min_15min_ic" represents the Pearson correlation between **signal at time t** with **future return calculated for (t+1min, t+16min)**.
 
 
 
