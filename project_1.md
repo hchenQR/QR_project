@@ -79,7 +79,15 @@ Definitions of the main columns are as follow:
 6. dd: Maximum drawdown
 7. mg_bp: Total PnL / Total turnover
 
-According to the performance table, the corresponding strategy can achieve around a 30% annualized return. The Sharpe ratio is around 1.7, which is as expected. 
+According to the performance table, the corresponding strategy can achieve around a 30% annualized return. The Sharpe ratio is around 1.7, which is as expected. Generally, the proposed signal has stable predictive power from 2021 to 2023 for IF, IH and IC contracts. 
+
+## Discussion
+If I plan to continue improving the signal, I would try to reduce its turnover rate (2000% on average), since the **mg_bp** stats are not good enough in the performance table. 
+
+The other thing I would like to try is to use the price of corresponding stock index when calculating this signal. It is very likely that the price of the stock index has a strong lead-lag effect on stock index futures.
+
+
+
 
 
 
